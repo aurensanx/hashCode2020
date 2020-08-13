@@ -1,9 +1,9 @@
 const fs = require("fs");
 
-const fileName = "d_big";
+const fileName = "c_memorable_moments";
 
 // read file
-const fileInput = fs.readFileSync('sampledata/in/' + fileName + '.in', 'utf8');
+const fileInput = fs.readFileSync('sampledata/in/' + fileName + '.txt', 'utf8');
 
 // write file
 const writeFile = dataOutput => fs.writeFile("sampledata/out/" + fileName + ".out", dataOutput, err => {
@@ -22,6 +22,7 @@ const fileArray = fileInput.split(/\r?\n/);
 
 const headData = head(fileArray);
 const bodyData = init(tail(fileArray));
+
 
 // export useful data
 module.exports = {headData, bodyData, writeFile};

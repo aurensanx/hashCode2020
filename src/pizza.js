@@ -4,7 +4,9 @@ const {headData, bodyData, writeFile} = require("./utils");
 // preproessing data specific problem
 const [R, C, L, H] = headData.split(" ").map(h => parseInt(h));
 const data = bodyData.map(d => d.split(""));
-const N = 10000000;
+const N = 10000;
+
+const tail = ([first, second, ...rest]) => rest;
 
 // solution
 // "str1,str2,str3,str4".match(/T/g) || []).length
